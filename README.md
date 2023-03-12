@@ -10,7 +10,7 @@ It also have a dark mode and allows to ask for biometrics before go in the app
 
 The dark mode
 
-![Download github repo](https://github.com/danny270793/SoundMeter/blob/master/playstore/images/001-main-dark.png)
+![Download github repo](https://github.com/danny270793/SoundMeter/blob/master/playstore/images/003-main-dark.png)
 
 ## Downloads
 
