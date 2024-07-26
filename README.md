@@ -1,6 +1,6 @@
 # SoundMeter
 
-Flutter app taht catches sound with the microphone and plot a graph with the decibels (dB)
+Flutter app that catches sound with the microphone and plot a graph with the decibels (dB)
 
 ![Download github repo](https://github.com/danny270793/SoundMeter/blob/master/playstore/images/001-main-light.png)
 
