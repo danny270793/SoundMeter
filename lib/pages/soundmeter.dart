@@ -62,38 +62,38 @@ class _SoundMeterPageState extends State<SoundMeterPage> {
   }
 
   void onData(final NoiseReading noiseReading) {
-      if(!isRecording) {
-        return;
-      }
-
-      if(noiseReading.maxDecibel > max || max == double.maxFinite) {
-        max = noiseReading.maxDecibel;
-      }
-      if(noiseReading.maxDecibel < min || min == double.minPositive) {
-        min = noiseReading.maxDecibel;
-      }
-
-      avg = noiseReading.meanDecibel;
-      current = noiseReading.maxDecibel;
-
-      if(measurements.length > maxXs) {
-        measurements.removeAt(0);
-      }
-
-      measurements.add(LineMeasurement(x: DateTime.now().millisecondsSinceEpoch, y: noiseReading.maxDecibel));
-      maxMeasurements.clear();
-      minMeasurements.clear();
-      for (var lineMeasurement in measurements) {
-        maxMeasurements.add(LineMeasurement(x: lineMeasurement.x, y: max));
-        minMeasurements.add(LineMeasurement(x: lineMeasurement.x, y: min));
-      }
-
-      setState(() {});
+    if(!isRecording) {
+      return;
     }
+
+    if(noiseReading.maxDecibel > max || max == double.maxFinite) {
+      max = noiseReading.maxDecibel;
+    }
+    if(noiseReading.maxDecibel < min || min == double.minPositive) {
+      min = noiseReading.maxDecibel;
+    }
+
+    avg = noiseReading.meanDecibel;
+    current = noiseReading.maxDecibel;
+
+    if(measurements.length > maxXs) {
+      measurements.removeAt(0);
+    }
+
+    measurements.add(LineMeasurement(x: DateTime.now().millisecondsSinceEpoch, y: noiseReading.maxDecibel));
+    maxMeasurements.clear();
+    minMeasurements.clear();
+    for (var lineMeasurement in measurements) {
+      maxMeasurements.add(LineMeasurement(x: lineMeasurement.x, y: max));
+      minMeasurements.add(LineMeasurement(x: lineMeasurement.x, y: min));
+    }
+
+    setState(() {});
+  }
 
   @override
   void initState() {
-    noiseSubscription = noiseMeter.noiseStream.listen(onData);
+    noiseSubscription = NoiseMeter().noise.listen(onData);
     super.initState();
   }
 
@@ -133,8 +133,8 @@ class _SoundMeterPageState extends State<SoundMeterPage> {
 
   Widget getHistoricalGraph() => measurements.isEmpty ? const Center(child: CircularProgressIndicator()) : SfCartesianChart(
     primaryXAxis: NumericAxis(
-        isVisible: false,
-        /*
+      isVisible: false,
+      /*
         plotBands: [
           PlotBand(
             associatedAxisStart: 0,
@@ -160,7 +160,7 @@ class _SoundMeterPageState extends State<SoundMeterPage> {
         */
     ),
     series: [
-      FastLineSeries(
+      FastLineSeries<LineMeasurement, int>(
           dataSource: maxMeasurements,
           dashArray: <double>[5, 5],
           xValueMapper: (LineMeasurement measurement, _) => measurement.x,
@@ -168,7 +168,7 @@ class _SoundMeterPageState extends State<SoundMeterPage> {
           color: Colors.red,
           animationDuration: 0
       ),
-      FastLineSeries(
+      FastLineSeries<LineMeasurement, int>(
           dataSource: minMeasurements,
           dashArray: <double>[5, 5],
           xValueMapper: (LineMeasurement measurement, _) => measurement.x,
@@ -176,7 +176,7 @@ class _SoundMeterPageState extends State<SoundMeterPage> {
           color: Colors.green,
           animationDuration: 0
       ),
-      FastLineSeries(
+      FastLineSeries<LineMeasurement, int>(
           dataSource: measurements,
           xValueMapper: (LineMeasurement measurement, _) => measurement.x,
           yValueMapper: (LineMeasurement measurement, _) => measurement.y,
@@ -281,14 +281,14 @@ class _SoundMeterPageState extends State<SoundMeterPage> {
           } else if (index == 2) {
             noiseSubscription.cancel();
             await Navigator.pushNamed(context, SettingsPage.path);
-            noiseSubscription = noiseMeter.noiseStream.listen(onData);
+            noiseSubscription = NoiseMeter().noise.listen(onData);
           }
           setState(() {});
         },
         items: [
           const BottomNavigationBarItem(
-              icon: Icon(Icons.restart_alt),
-              label: 'Restart',
+            icon: Icon(Icons.restart_alt),
+            label: 'Restart',
           ),
           isRecording ? const BottomNavigationBarItem(
               icon: Icon(Icons.stop),
@@ -317,7 +317,7 @@ class _SoundMeterPageState extends State<SoundMeterPage> {
                   Expanded(child: getCurrentGraph()),
                   getBar()
                 ],
-          )),
+              )),
           Expanded(child: getHistoricalGraph())
         ],
       ),

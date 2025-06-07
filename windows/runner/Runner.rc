@@ -93,7 +93,7 @@ BEGIN
             VALUE "FileDescription", "soundmeter" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "soundmeter" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 io.github.danny270793.soundmeter. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 io.github.danny270793.soundmeter. All rights reserved." "\0"
             VALUE "OriginalFilename", "soundmeter.exe" "\0"
             VALUE "ProductName", "soundmeter" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
