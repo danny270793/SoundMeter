@@ -1,6 +1,6 @@
 {
-    "name": "Sound meter",
-    "short_name": "Sound meter",
+    "name": "Soundmeter",
+    "short_name": "Soundmeter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#2196F3",

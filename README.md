@@ -34,7 +34,7 @@ flutter run
 
 ## Downloads
 
-Found it on [Google Play](https://play.google.com/store/apps/details?id=io.github.danny270793.soundmeter.soundmeter)
+Found it on [Google Play](https://play.google.com/store/apps/details?id=io.github.danny270793.soundmeter)
 
 ## Follow me
 

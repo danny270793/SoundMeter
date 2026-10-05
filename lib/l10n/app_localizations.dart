@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Sound meter'**
+  /// **'Soundmeter'**
   String get appTitle;
 
   /// No description provided for @settings.
@@ -305,7 +305,7 @@ abstract class AppLocalizations {
   /// No description provided for @micDeniedBody.
   ///
   /// In en, this message translates to:
-  /// **'Sound meter uses the microphone only on this device to measure sound levels. Nothing is recorded.'**
+  /// **'Soundmeter uses the microphone only on this device to measure sound levels. Nothing is recorded.'**
   String get micDeniedBody;
 
   /// No description provided for @grantPermission.
@@ -431,7 +431,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsPrivacyDataBody.
   ///
   /// In en, this message translates to:
-  /// **'Sound meter listens to the microphone only while the app is open to compute sound levels. Audio is processed in memory and is never recorded, saved or sent anywhere.'**
+  /// **'Soundmeter listens to the microphone only while the app is open to compute sound levels. Audio is processed in memory and is never recorded, saved or sent anywhere.'**
   String get settingsPrivacyDataBody;
 
   /// No description provided for @settingsPrivacyInfraTitle.
@@ -485,7 +485,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsTermsAcceptanceBody.
   ///
   /// In en, this message translates to:
-  /// **'By accessing or using Sound meter, you agree to these terms. If you do not agree, do not use the app.'**
+  /// **'By accessing or using Soundmeter, you agree to these terms. If you do not agree, do not use the app.'**
   String get settingsTermsAcceptanceBody;
 
   /// No description provided for @settingsTermsDisclaimerTitle.
