@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Sound meter uses the microphone to measure sound levels. Audio is never recorded.</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>Unlock the app with Face ID when you enable this option.</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+      <string>en</string>
+      <string>es</string>
+    </array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>https</string>
+      <string>mailto</string>
+    </array>
     <key>CFBundleDevelopmentRegion</key>
     <string>$(DEVELOPMENT_LANGUAGE)</string>
     <key>CFBundleDisplayName</key>
