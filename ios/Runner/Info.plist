@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>NSMicrophoneUsageDescription</key>
-    <string>Sound meter uses the microphone to measure sound levels. Audio is never recorded.</string>
+    <string>Soundmeter uses the microphone to measure sound levels. Audio is never recorded.</string>
     <key>NSFaceIDUsageDescription</key>
     <string>Unlock the app with Face ID when you enable this option.</string>
     <key>CFBundleLocalizations</key>
@@ -19,7 +19,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>$(DEVELOPMENT_LANGUAGE)</string>
     <key>CFBundleDisplayName</key>
-    <string>Sound meter</string>
+    <string>Soundmeter</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -27,7 +27,7 @@
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>Sound meter</string>
+    <string>Soundmeter</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>

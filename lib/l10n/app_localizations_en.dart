@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -9,7 +10,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appTitle => 'Sound meter';
+  String get appTitle => 'Soundmeter';
 
   @override
   String get settings => 'Settings';
@@ -115,7 +116,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get micDeniedBody =>
-      'Sound meter uses the microphone only on this device to measure sound levels. Nothing is recorded.';
+      'Soundmeter uses the microphone only on this device to measure sound levels. Nothing is recorded.';
 
   @override
   String get grantPermission => 'Allow microphone';
@@ -191,7 +192,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsPrivacyDataBody =>
-      'Sound meter listens to the microphone only while the app is open to compute sound levels. Audio is processed in memory and is never recorded, saved or sent anywhere.';
+      'Soundmeter listens to the microphone only while the app is open to compute sound levels. Audio is processed in memory and is never recorded, saved or sent anywhere.';
 
   @override
   String get settingsPrivacyInfraTitle => 'What we store';
@@ -222,7 +223,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsTermsAcceptanceBody =>
-      'By accessing or using Sound meter, you agree to these terms. If you do not agree, do not use the app.';
+      'By accessing or using Soundmeter, you agree to these terms. If you do not agree, do not use the app.';
 
   @override
   String get settingsTermsDisclaimerTitle => 'Not a certified instrument';

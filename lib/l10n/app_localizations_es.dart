@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -9,7 +10,7 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get appTitle => 'Sonómetro';
+  String get appTitle => 'Soundmeter';
 
   @override
   String get settings => 'Ajustes';
@@ -115,7 +116,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get micDeniedBody =>
-      'Sonómetro usa el micrófono solo en este dispositivo para medir el nivel de sonido. No se graba nada.';
+      'Soundmeter usa el micrófono solo en este dispositivo para medir el nivel de sonido. No se graba nada.';
 
   @override
   String get grantPermission => 'Permitir micrófono';
@@ -191,7 +192,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get settingsPrivacyDataBody =>
-      'Sonómetro escucha el micrófono solo mientras la app está abierta para calcular el nivel de sonido. El audio se procesa en memoria y nunca se graba, guarda ni envía.';
+      'Soundmeter escucha el micrófono solo mientras la app está abierta para calcular el nivel de sonido. El audio se procesa en memoria y nunca se graba, guarda ni envía.';
 
   @override
   String get settingsPrivacyInfraTitle => 'Qué guardamos';
@@ -222,7 +223,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get settingsTermsAcceptanceBody =>
-      'Al acceder o usar Sonómetro, aceptas estos términos. Si no estás de acuerdo, no uses la app.';
+      'Al acceder o usar Soundmeter, aceptas estos términos. Si no estás de acuerdo, no uses la app.';
 
   @override
   String get settingsTermsDisclaimerTitle => 'No es un instrumento certificado';

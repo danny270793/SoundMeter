@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+
 import '../locale/app_locale_controller.dart';
 import '../meter/app_meter_settings_controller.dart';
 import '../security/app_biometric_unlock_controller.dart';
