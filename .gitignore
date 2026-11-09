@@ -45,3 +45,6 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /coverage/
+
+# Firebase App Distribution config (app IDs, tester groups)
+scripts/.env.deploy
